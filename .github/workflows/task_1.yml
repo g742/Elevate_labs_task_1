@@ -35,7 +35,6 @@ jobs:
 
       - name: Pull image from Docker Hub and run container
         run: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/sample-node-app:latest
           docker run -d -p 3000:3000 --name app ${{ secrets.DOCKER_USERNAME }}/sample-node-app:latest
 
       - name: Wait for server to start
